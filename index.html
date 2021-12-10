@@ -3,13 +3,15 @@
     * {font-familly: sans-serif;}
   </style>
   
+  <p id="notice">Scanning for virus</p>
   <img id="loader" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif">
   <a style="display: none;" id="redirect" href="/indx.html">Click here if you are not redirected</a>
-  <p>DO NOT LEAVE THE PAGE UNTIL YOU ARE REDIRECTED OR YOU CLICK THE LINK ABOVE</p>
+  <p>If you see a link, please click it</p>
   
   <script>
     function loaded() {
       document.getElementById("loader").style="display: none;";
+      document.getElementById("notice").style="display: none;";
       document.getElementById("redirect").style="display: block;";
     }
     setTimeout(loaded, 5000);

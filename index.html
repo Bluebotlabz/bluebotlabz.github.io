@@ -1,4 +1,5 @@
 <html>
+<iframe id="ytplayerI" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <div id="loading" style="z-index: 9; display: absolute; height: 100vH; width: 100vW;">
   <img src="https://i.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.webp">
 </div>
@@ -33,35 +34,35 @@
   var player;
 
   function onYouTubeIframeAPIReady() {
-    player = new YT.Player('ytplayerJI', {
+    ytplayerI = new YT.Player('ytplayerI', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange
   	  }
     });
     
-    player = new YT.Player('ytplayerII', {
+    ytplayerII = new YT.Player('ytplayerII', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange
   	  }
     });
     
-    player = new YT.Player('ytplayerIII', {
+    ytplayerIII = new YT.Player('ytplayerIII', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange
   	  }
     });
     
-    player = new YT.Player('ytplayerIV', {
+    ytplayerIV = new YT.Player('ytplayerIV', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange
   	  }
     });
     
-    player = new YT.Player('ytplayerV', {
+    ytplayerV = new YT.Player('ytplayerV', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange
@@ -69,7 +70,7 @@
     });
   }
   
-  player = new YT.Player('ytplayerVI', {
+  ytplayerVI = new YT.Player('ytplayerVI', {
 	  events: {
 	    'onReady': onPlayerReady,
 	    'onStateChange': onPlayerStateChange

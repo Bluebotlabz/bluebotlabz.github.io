@@ -25,102 +25,96 @@
 </div>
 <script></script>
 <script>
-  var tag = document.createElement('script');
+var tag = document.createElement('script');
 
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  var playerI;
-  var playerII;
-	var playerIII;
-	var playerIV;
-	var playerV;
-	var playerVI;
+var playerI;
+var playerII;
+var playerIII;
+var playerIV;
+var playerV;
+var playerVI;
 
-  function onYouTubeIframeAPIReady() {
-		var succeed = 0;
-		try {
-			ytplayerI = new YT.Player('ytplayerI', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-    
+function onYouTubeIframeAPIReady() {
+    var succeed = 0;
     try {
-			ytplayerII = new YT.Player('ytplayerII', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-		
-		try {
-			ytplayerIII = new YT.Player('ytplayerIII', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-		
-		try {
-			ytplayerIV = new YT.Player('ytplayerIV', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-		
-		try {
-			ytplayerV = new YT.Player('ytplayerV', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-		
-		try {
-			ytplayerVI = new YT.Player('ytplayerVI', {
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-				}
-			});
-			succeed++;
-		} catch {
-		}
-		
-		if (succeed == 0) {
-			document.getElementById("loading").style = "display:none;";
-		}
+        ytplayerI = new YT.Player('ytplayerI', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
 
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-  
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING) {
-	  	document.getElementById("loading").style = "display:none;";
-  	  event.target.unMute();
-  	  event.target.setVolume(100);
-	  
+    try {
+        ytplayerII = new YT.Player('ytplayerII', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
+
+    try {
+        ytplayerIII = new YT.Player('ytplayerIII', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
+
+    try {
+        ytplayerIV = new YT.Player('ytplayerIV', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
+
+    try {
+        ytplayerV = new YT.Player('ytplayerV', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
+
+    try {
+        ytplayerVI = new YT.Player('ytplayerVI', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        succeed++;
+    } catch {}
+
+    if (succeed == 0) {
+        document.getElementById("loading").style = "display:none;";
     }
-  }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            document.getElementById("loading").style = "display:none;";
+            event.target.unMute();
+            event.target.setVolume(100);
+
+        }
+    }
 </script>
 <html>

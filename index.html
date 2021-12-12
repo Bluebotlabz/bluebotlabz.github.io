@@ -35,12 +35,12 @@
   <h1 id="oops">Sorry, this page does not work on mobile devices</h1>
   <p id="notice">Scanning for virus</p>
   <img id="loader" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif">
-  <a style="display: none;" id="redirect" href="/indx.html">Click here if you are not redirected</a>
+  <a style="display: none;" id="redirect" onclick="rollit()">Click here if you are not redirected</a>
   <p>If you see a link, please click it</p>
   
   <script>
     var load = new XMLHttpRequest();
-    load.open("GET", "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    load.open("GET", "https://www.youtube.com/embed/dQw4w9WgXcQ");
     
     
     function rollit() {
@@ -54,7 +54,6 @@
     function loaded() {
       document.getElementById("loader").style="display: none;";
       document.getElementById("notice").style="display: none;";
-      rollit();
       
       document.getElementById("redirect").style="display: block;";
     }

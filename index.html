@@ -20,7 +20,7 @@
 		};
 		
 		function rollit(ricks = 0) {
-			if (!window.mobileAndTabletCheck) {
+			if (!window.mobileAndTabletCheck()) {
 				document.getElementById("redirect").style="display: none;";
 
 				var div = document.createElement('div');

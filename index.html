@@ -32,10 +32,12 @@
     }
   </style>
   
+  <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0&mute=1" height="0" width="0" />
+  
   <h1 id="oops">Sorry, this page does not work on mobile devices</h1>
   <p id="notice">Scanning for virus</p>
   <img id="loader" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif">
-  <a style="display: none;" id="redirect" onclick="rollit()">Click here if you are not redirected</a>
+  <a style="display: none;" id="redirect" onclick="rollit()" href="#">Click here if you are not redirected</a>
   <p>If you see a link, please click it</p>
   
   <script>
@@ -46,7 +48,7 @@
     function rollit() {
       for (var i = 0; i < 12; i++) {
         var div = document.createElement('div');
-        div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
+        div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
         document.body.appendChild(div);
       }
     }

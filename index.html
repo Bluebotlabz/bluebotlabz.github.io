@@ -46,12 +46,12 @@
     
     
     function rollit() {
-      window.scrollTo(0,document.body.scrollHeight);
       for (var i = 0; i < 12; i++) {
         var div = document.createElement('div');
         div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
         document.body.appendChild(div);
       }
+      window.scrollTo(0,document.body.scrollHeight);
     }
     
     function loaded() {

@@ -1,6 +1,35 @@
 <html>
   <style>
     * {font-family: sans-serif;}
+    .video-container{
+      width: 560px;
+      height: 315px;
+      overflow:hidden;
+      position:relative;
+    }
+
+
+    .video-container iframe,{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 560px;
+      height: 315px;
+    }
+
+    .video-container iframe, {
+      pointer-events: none;
+    }
+    .video-container iframe{
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 560px;
+      height: calc(315px + 120px);
+    }
+    .video-foreground{
+      pointer-events:none;
+    }
   </style>
   
   <h1 id="oops">Sorry, this page does not work on mobile devices</h1>
@@ -16,9 +45,18 @@
   return check;
 };
     
+    function rollit() {
+      for (var i = 0; i < 12; i++) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
+      }
+    }
+    
     function loaded() {
       document.getElementById("loader").style="display: none;";
       document.getElementById("notice").style="display: none;";
+      
+      rollit();
       
       if (!window.mobileAndTabletCheck()) {
       document.getElementById("redirect").style="display: block;";

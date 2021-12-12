@@ -20,26 +20,16 @@
 		};
 		
 		function rollit(ricks = 0) {
-			if (!window.mobileAndTabletCheck()) {
-				document.getElementById("redirect").style="display: none;";
+			document.getElementById("redirect").style="display: none;";
 
-				var div = document.createElement('div');
-				//div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
-				div.innerHTML = '<video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video>'
-				document.body.appendChild(div);
+			var div = document.createElement('div');
+			div.innerHTML = '<video autoplay loop playsinline><source src="rollrick.mp4" type="video/mp4"></video>'
+			document.body.appendChild(div);
 
-				if (ricks < 20) {
-					setTimeout(function() { rollit(ricks+1); }, 500);
-				} else if (ricks < 40) {
-					setTimeout(function() { rollit(ricks+1); }, 750);
-				}
-			} else {
-				document.getElementById("redirect").style="display: none;";
-
-				var div = document.createElement('div');
-				//div.innerHTML = '<div class="video-container"><div class="video-foreground"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&modestbranding=1&start=0&rel=0&iv_load_policy=3&disablekb=1&controls=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay"></iframe></div></div>';
-				div.innerHTML = '<video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video>'
-				document.body.appendChild(div);
+			if (ricks < 20) {
+				setTimeout(function() { rollit(ricks+1); }, 500);
+			} else if (ricks < 40 && !window.mobileAndTabletCheck()) {
+				setTimeout(function() { rollit(ricks+1); }, 750);
 			}
 			
 			window.scrollTo({

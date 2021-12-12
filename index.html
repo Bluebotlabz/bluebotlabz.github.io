@@ -1,14 +1,36 @@
 <html>
 	<style>
-		* {font-family: sans-serif;}
+		* {
+			font-family: sans-serif;
+		}
 		video {
-		width: 50%;
+			width: 50%;
+		}
+		#loader img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+		#loader {
+			text-align: center;
+		}
+		code {
+			font-family: courier, monospace;
 		}
 	</style>
 	<video autoplay muted style="width: 0%; height: 0%;">
 		<source src="rollrick.mp4" type="video/mp4">
 	</video>
-	<img id="loader" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif">
+	<div id="loader">
+		<img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif">
+		<h1>Checking your browser before accessing bluebotlabz.github.io</h1>
+		<p>This process is automatic. Your browser will redirect to your requested content shortly.</p>
+		<p>Please allow up to 5 seconds...</p>
+		<br>
+		<p>DDoS protection by <a href="bluebotlaboratories.com">Bluebotlaboratories</a></p>
+		<p>Ray ID: <code>6f85hf9472947d93</code></p>
+	</div>
 	<a style="display: none;" id="redirect" onclick="rollit()" href="#">Click here if you are not redirected</a>
 	<p style="display: none;" id="yhlol">If you see a link, please click it</p>
 	<h1 style="display: none;" id="oops">OOPS!<br>This only works on PC, sorry</h1>

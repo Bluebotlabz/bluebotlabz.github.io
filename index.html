@@ -41,6 +41,12 @@
 				div.innerHTML = '<video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video><br><video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video>'
 				document.body.appendChild(div);
 			}
+			
+			window.scrollTo({
+				top: document.body.scrollHeight,
+				left: 0,
+				behavior: 'smooth'
+			});
 		}
 		
 		function loaded() {

@@ -15,13 +15,11 @@
   <p>If you see a link, please click it</p>
   
   <script>
-		var ricks = 0;
-		var maxRicks = 10;
     var load = new XMLHttpRequest();
     load.open("GET", "https://www.youtube.com/embed/dQw4w9WgXcQ");
     
     
-    function rollit() {
+    function rollit(ricks = 0) {
       document.getElementById("redirect").style="display: none;";
       
       var div = document.createElement('div');
@@ -29,8 +27,8 @@
 	  div.innerHTML = '<video autoplay loop><source src="rollrick.mp4" type="video/mp4"></video>'
       document.body.appendChild(div);
       
-			if (ricks < maxRicks) {
-				setTimeout(rollit, 100);
+			if (ricks < 10) {
+				setTimeout(function() { rollit(ricks+1); }, 100);
 			}
     }
     
